@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis of Blogs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px); /* Adjusted width to fix alignment */
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .examples {
+            margin-top: 20px;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis of Blogs</h1>
+        <form action="/analyze" method="post">
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url" required><br>
+            <label for="classes_to_try">Class id's to Target (comma-separated):</label>
+            <input type="text" id="classes_to_try" name="classes_to_try" required><br>
+            <button type="submit">Generate ID</button>
+        </form>
+    </div>
+
+    <div class="examples">
+        <p>Examples:</p>
+        <p>URL: <a href="https://www.datasciencecentral.com/human-centric-ai-through-better-transparency-and-disclosure/" target="_blank">https://www.datasciencecentral.com/human-centric-ai-through-better-transparency-and-disclosure/</a></p>
+        <p>Class IDs: tdb_single_content, entry-content</p>
+    </div>
+</body>
+</html>
